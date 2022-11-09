@@ -1516,7 +1516,7 @@
     (effects (font (size 2.5 2.5)) (justify left bottom))
     (uuid 24047206-750f-432e-9151-f84ffdc8dc82)
   )
-  (text "Oscillator" (at 22.86 105.41 0)
+  (text "Crystal" (at 22.86 105.41 0)
     (effects (font (size 2.5 2.5)) (justify left bottom))
     (uuid 3a7d11d9-42d7-451c-9602-00fe6de37445)
   )
@@ -2293,7 +2293,7 @@
     (uuid 98cb8a72-5f9e-47a5-9051-d93a01408421)
     (property "Reference" "Y1" (id 0) (at 31.75 116.84 0))
     (property "Value" "32.768kHz" (id 1) (at 31.75 119.38 0))
-    (property "Footprint" "XTAL_ABS07-32.768KHZ-1-T" (id 2) (at 31.75 124.46 0)
+    (property "Footprint" "library:ABS07-32.768KHZ-T" (id 2) (at 31.75 124.46 0)
       (effects (font (size 1.27 1.27)) (justify left bottom) hide)
     )
     (property "Datasheet" "https://abracon.com/Resonators/ABS07.pdf" (id 3) (at 31.75 124.46 0)
@@ -2625,7 +2625,7 @@
     (uuid e1852524-e042-4a79-89b8-c137524f4cbd)
     (property "Reference" "J3" (id 0) (at 118.11 154.94 0))
     (property "Value" "USB4110" (id 1) (at 118.11 157.48 0))
-    (property "Footprint" "GCT_USB4110-GF-A_REVB" (id 2) (at 118.11 170.18 0)
+    (property "Footprint" "library:GCT_USB4110-GF-A_REVB" (id 2) (at 118.11 170.18 0)
       (effects (font (size 1.27 1.27)) (justify left bottom) hide)
     )
     (property "Datasheet" "https://gct.co/files/drawings/usb4110.pdf" (id 3) (at 118.11 170.18 0)
@@ -2822,7 +2822,7 @@
     (uuid fa898b87-1714-4bd5-8bc1-596ed62b5578)
     (property "Reference" "U1" (id 0) (at 100.965 22.86 0))
     (property "Value" "ESP32-C3-WROOM-02" (id 1) (at 100.965 25.4 0))
-    (property "Footprint" "Espressif:ESP32-C3-WROOM-02" (id 2) (at 100.33 92.71 0)
+    (property "Footprint" "library:ESP32-C3-WROOM-02" (id 2) (at 100.33 92.71 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "https://www.espressif.com/sites/default/files/documentation/esp32-c3-wroom-02_datasheet_en.pdf" (id 3) (at 100.33 95.25 0)
@@ -3086,7 +3086,7 @@
       (reference "D3") (unit 1) (value "D") (footprint "Diode_SMD:D_SOD-323_HandSoldering")
     )
     (path "/e1852524-e042-4a79-89b8-c137524f4cbd"
-      (reference "J3") (unit 1) (value "USB4110") (footprint "GCT_USB4110-GF-A_REVB")
+      (reference "J3") (unit 1) (value "USB4110") (footprint "library:GCT_USB4110-GF-A_REVB")
     )
     (path "/6854da47-4f08-4419-af98-9e6336d90815"
       (reference "L1") (unit 1) (value "1uH") (footprint "Inductor_SMD:L_1008_2520Metric_Pad1.43x2.20mm_HandSolder")
@@ -3137,7 +3137,7 @@
       (reference "RESET1") (unit 1) (value "EVQ-Q2F03W") (footprint "Button_Switch_SMD:SW_SPST_EVQP2")
     )
     (path "/fa898b87-1714-4bd5-8bc1-596ed62b5578"
-      (reference "U1") (unit 1) (value "ESP32-C3-WROOM-02") (footprint "Espressif:ESP32-C3-WROOM-02")
+      (reference "U1") (unit 1) (value "ESP32-C3-WROOM-02") (footprint "library:ESP32-C3-WROOM-02")
     )
     (path "/87d0a414-90d1-4b10-a9e6-0eae005dda6c"
       (reference "U2") (unit 1) (value "TPS631000") (footprint "Package_TO_SOT_SMD:SC-70-8")
@@ -3146,7 +3146,7 @@
       (reference "U4") (unit 1) (value "MCP73832") (footprint "Package_TO_SOT_SMD:SOT-23-5_HandSoldering")
     )
     (path "/98cb8a72-5f9e-47a5-9051-d93a01408421"
-      (reference "Y1") (unit 1) (value "32.768kHz") (footprint "XTAL_ABS07-32.768KHZ-1-T")
+      (reference "Y1") (unit 1) (value "32.768kHz") (footprint "library:ABS07-32.768KHZ-T")
     )
   )
 )
