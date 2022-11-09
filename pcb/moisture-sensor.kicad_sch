@@ -1868,7 +1868,7 @@
     (property "Reference" "R12" (id 0) (at 177.8 52.0699 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Value" "120R" (id 1) (at 177.8 54.6099 0)
+    (property "Value" "220R" (id 1) (at 177.8 54.6099 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" (id 2) (at 177.038 53.34 90)
@@ -1877,7 +1877,7 @@
     (property "Datasheet" "~" (id 3) (at 175.26 53.34 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "MPN" "RC0805FR-07120RL" (id 4) (at 175.26 53.34 0)
+    (property "MPN" "RC0805FR-07220RL" (id 4) (at 175.26 53.34 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid b093f951-f65e-4f08-8888-670c63f664e1))
@@ -2366,7 +2366,7 @@
     (property "Reference" "C4" (id 0) (at 191.77 142.2399 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "22uF" (id 1) (at 191.77 144.7799 0)
+    (property "Value" "47uF" (id 1) (at 191.77 144.7799 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" (id 2) (at 188.9252 147.32 0)
@@ -2375,7 +2375,7 @@
     (property "Datasheet" "~" (id 3) (at 187.96 143.51 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "MPN" "GRM21BZ71A226ME15" (id 4) (at 187.96 143.51 0)
+    (property "MPN" "GRM21BR61A476ME15" (id 4) (at 187.96 143.51 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid c3a2d367-88fd-4109-80bc-eba2f97257c1))
@@ -3062,7 +3062,7 @@
       (reference "C3") (unit 1) (value "18pF") (footprint "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder")
     )
     (path "/ba9a2a55-7b19-46a7-86ca-7630aa58a059"
-      (reference "C4") (unit 1) (value "22uF") (footprint "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder")
+      (reference "C4") (unit 1) (value "47uF") (footprint "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder")
     )
     (path "/e14e10b8-5142-473e-a2c0-7284a4b8625c"
       (reference "C5") (unit 1) (value "47uF") (footprint "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder")
@@ -3125,7 +3125,7 @@
       (reference "R11") (unit 1) (value "47R") (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder")
     )
     (path "/3ae33bbc-cc68-4c60-94fc-bc559776b4f5"
-      (reference "R12") (unit 1) (value "120R") (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder")
+      (reference "R12") (unit 1) (value "220R") (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder")
     )
     (path "/59f24728-e1d5-49ea-a06b-e5d3361459fe"
       (reference "R13") (unit 1) (value "3.3k") (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder")
