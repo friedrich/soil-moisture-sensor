@@ -1,0 +1,32 @@
+\documentclass[tikz,11pt]{standalone}
+
+\usepackage{tikz}
+\usepackage{circuitikz}
+
+\standaloneenv{circuitikz}
+
+\ctikzset{
+  diodes/scale=0.8,
+  capacitors/width=0.15,
+  bipoles/length=1cm,
+}
+
+\begin{document}
+\begin{circuitikz}[european, straight voltages, scale=3]
+  \draw (0,1)
+  to[V,v=$U_0$] (0,0);
+
+  \draw (0,1)
+  to[R=$R_1$, -*] (1,1)
+  to[C=$C_1$, v=$U_1$, -*] (1,0);
+
+  \draw(1,1)
+  to[Do=$D_1$, i=$I_D$, -*] (2,1)
+  to[C=$C_2$, v=$U_2$, -*] (2,0);
+
+  \draw (2,1)
+  to[short] (3,1)
+  to[R=$R_2$] (3,0)
+  to[short] (0,0);
+\end{circuitikz}
+\end{document}

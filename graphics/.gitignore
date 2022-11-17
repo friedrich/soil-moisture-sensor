@@ -1,0 +1,14 @@
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.pdf
+!*logo*.pdf
+*.synctex.gz
+*.toc
+_region_.tex
+auto/
+*.tar.gz
