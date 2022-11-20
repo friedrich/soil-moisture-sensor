@@ -33,3 +33,11 @@ $$ U_p = U_+ \frac{1 - e^{-\omega T d}}{1 - e^{-\omega T}}, $$
 
 where $U_+$ is the high voltage of the voltage source, $T$ the period, $d$ the
 duty cycle, and $\omega = 1/(R_1 C_2)$.
+
+## Possible future circuit improvements
+
+- Add a switch for turning the device on and off.
+- Add a button to put the device into a mode where it acts as an access point or
+  it can be connected to via Bluetooth.
+- Make it possible for the microcontroller to measure battery voltage and to
+  know if it is being powered using USB or the battery.
