@@ -15,12 +15,14 @@ solder them by hand.
 ![rendering](graphics/sensor-circuit.png)
 
 The sensor circuit consists of the following building blocks:
-- A voltage source $U_0$ that supplies a square wave.
+- The microcontroller generating a square wave, depicted as voltage source
+  $U_0$.
 - A low pass filter made up of resistor $R_1$ and capacitor $C_1$. Capacitor
   $C_1$ stands for sensor wires together with the medium to be measured acting
   as a dielectric. Its value is to be determined by the circuit.
 - A peak voltage detector made up of diode $D_1$, resistor $R_2$ and capacitor
   $C_2$.
+- The microcontroller measuring voltage $U_2$.
 
 Since resistor $R_2$ is chosen to be quite large, the impact of the peak voltage
 detector on the low pass filter becomes negligible, as soon as $C_2$ reaches a
