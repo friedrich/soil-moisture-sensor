@@ -1951,7 +1951,7 @@
     (property "Datasheet" "~" (id 3) (at 86.36 119.38 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "MPN" "EVQ-Q2F03W" (id 4) (at 86.36 124.46 0)
+    (property "MPN" "EVQ-P2K02Q" (id 4) (at 86.36 124.46 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 83b51723-a56d-4924-8073-1bbf3e00603f))
