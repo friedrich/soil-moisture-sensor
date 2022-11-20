@@ -1642,7 +1642,7 @@
     (property "Footprint" "Diode_SMD:D_SOD-323_HandSoldering" (id 2) (at 48.26 166.37 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (id 3) (at 48.26 166.37 0)
+    (property "Datasheet" "https://www.diodes.com/assets/Datasheets/1N4148WS_BAV16WS.pdf" (id 3) (at 48.26 166.37 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "MPN" "BAV16WS-7-F" (id 4) (at 48.26 166.37 0)
