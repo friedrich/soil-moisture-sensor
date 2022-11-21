@@ -1,5 +1,7 @@
 *-backups/
 *.kicad_prl
 fp-info-cache
+sym-lib-table
+fp-lib-table
 moisture-sensor.xml
 output/
