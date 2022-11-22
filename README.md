@@ -36,8 +36,11 @@ duty cycle, and $\omega = 1/(R_1 C_2)$.
 
 ## Possible future circuit improvements
 
+- Add battery protection circuit.
 - Add a switch for turning the device on and off.
 - Add a button to put the device into a mode where it acts as an access point or
   it can be connected to via Bluetooth.
 - Make it possible for the microcontroller to measure battery voltage and to
-  know if it is being powered using USB or the battery.
+  know if it is being powered using USB or the battery. Detect USB using an RTC
+  GPIO port to be able to wake the microcontroller when plugged in.
+- Replace the battery solder pads with a connector.
