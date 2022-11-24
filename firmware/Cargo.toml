@@ -1,0 +1,24 @@
+[package]
+name = "soil-moisture-sensor-firmware"
+version = "0.1.0"
+authors = ["Friedrich Schöller <code@schoeller.se>"]
+edition = "2021"
+
+[profile.release]
+opt-level = "s"
+
+[profile.dev]
+opt-level = "z"
+
+[dependencies]
+anyhow = "1"
+
+# Versions taken from https://github.com/esp-rs/esp-idf-svc/blob/v0.43.0/Cargo.toml
+esp-idf-svc = { version = "0.43.0", features = ["experimental"] }
+esp-idf-sys = { version = "0.31.11", features = ["binstart"] }
+esp-idf-hal = "0.39"
+embedded-svc = "0.23"
+
+[build-dependencies]
+embuild = "0.30"
+anyhow = "1"
