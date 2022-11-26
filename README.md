@@ -29,11 +29,11 @@ detector on the low pass filter becomes negligible, as soon as $C_2$ reaches a
 stable voltage. Just considering the voltage source together with the low pass
 filter leads to a peak voltage of
 
-$$ U_p = U_+ \frac{1 - e^{-\omega T d}}{1 - e^{-\omega T}}, $$
+$$ U_p = U_+ \frac{1 - e^{-\omega T D}}{1 - e^{-\omega T}}, $$
 
-where $U_+$ is the high voltage of the voltage source, $T$ the period, $d$ the
+where $U_+$ is the high voltage of the voltage source, $T$ the period, $D$ the
 duty cycle, and $\omega = 1/(R_1 C_2)$. The peak voltage has a range from $U_+$
-for zero $C_2$ down to $d U_+$ for infinite $C_2$.
+for zero $C_2$ down to $D U_+$ for infinite $C_2$.
 
 ## Possible future circuit improvements
 
