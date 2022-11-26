@@ -32,7 +32,8 @@ filter leads to a peak voltage of
 $$ U_p = U_+ \frac{1 - e^{-\omega T d}}{1 - e^{-\omega T}}, $$
 
 where $U_+$ is the high voltage of the voltage source, $T$ the period, $d$ the
-duty cycle, and $\omega = 1/(R_1 C_2)$.
+duty cycle, and $\omega = 1/(R_1 C_2)$. The peak voltage has a range from $U_+$
+for zero $C_2$ down to $d U_+$ for infinite $C_2$.
 
 ## Possible future circuit improvements
 
