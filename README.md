@@ -49,13 +49,3 @@ for zero $C_2$ down to $D U_+$ for infinite $C_2$.
   is pushed into the soil. Additionally, moisture variations are more relevant
   deeper down than on the top.
 - Increase the length of the probe.
-
-## Known issues
-
-When the device was powered by USB only, the microcontroller's power supply
-would drop to a point where the chip would reset during WiFi activation. Also,
-communication with the USB host did get interrupted frequently. I increased the
-size of the capacitors of the LiPo charge controller from 10 μF to 47 μF, which
-improved the situation to a point where the microcontroller does not seem to
-reset anymore. However, the power supply still occasionally drops to around 2.4
-V.
