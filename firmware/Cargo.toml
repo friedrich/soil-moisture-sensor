@@ -12,6 +12,7 @@ opt-level = "z"
 
 [dependencies]
 anyhow = "1"
+chrono = { version = "0.4", default_features = false, features = ["clock"] }
 
 # Versions taken from https://github.com/esp-rs/esp-idf-svc/blob/v0.43.0/Cargo.toml
 esp-idf-svc = { version = "0.43.0", features = ["experimental"] }
