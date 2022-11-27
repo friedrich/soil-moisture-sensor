@@ -2,8 +2,8 @@
 
 A capacitive moisture sensor board employing an ESP32-C3 RISC-V microcontroller
 capable of transmitting measurements via Wi-Fi and Bluetooth 5 (LE). The board
-can be powered using USB-C, or a single cell LiPo battery. The battery is
-charged when power is supplied to the USB-C port.
+is powered by a single cell LiPo battery, which can be charged using the USB-C
+port.
 
 ![rendering](graphics/moisture-sensor.webp)
 
@@ -49,3 +49,7 @@ for zero $C_2$ down to $D U_+$ for infinite $C_2$.
   is pushed into the soil. Additionally, moisture variations are more relevant
   deeper down than on the top.
 - Increase the length of the probe.
+- Make it possible to power the board without a battery, using USB-C only. This
+  is currently possible by bypassing the battery charge management controller by
+  connecting VDD and +BATT. Otherwise, the power supply voltage of the
+  microcontroller is not stable.
