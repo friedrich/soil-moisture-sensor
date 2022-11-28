@@ -164,7 +164,7 @@ fn run() -> Result<()> {
 
 fn slow_clock_seconds() -> u32 {
     let rtc_time = unsafe { esp_idf_sys::rtc_time_get() };
-    (rtc_time / u64::from(esp_idf_sys::RTC_SLOW_CLK_FREQ_32K) / 4) as _
+    (rtc_time / u64::from(esp_idf_sys::RTC_SLOW_CLK_FREQ_32K)) as _
 }
 
 fn greeting<T: gpio::Pin, MODE: gpio::OutputMode>(
