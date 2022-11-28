@@ -53,3 +53,5 @@ for zero $C_2$ down to $D U_+$ for infinite $C_2$.
   is currently possible by bypassing the battery charge management controller by
   connecting VDD and +BATT. Otherwise, the power supply voltage of the
   microcontroller is not stable.
+- Expose JTAG pins for development since the USB-to-JTAG interface is turned off
+  during deep sleep.
