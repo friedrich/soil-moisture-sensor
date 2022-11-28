@@ -93,7 +93,6 @@ fn run() -> Result<()> {
             bail!("error measuring: {}", e);
         }
     };
-    FreeRtos::delay_ms(1000);
 
     let sysloop = eventloop::EspSystemEventLoop::take()?;
     let nvs_partition = nvs::EspDefaultNvsPartition::take()?;
