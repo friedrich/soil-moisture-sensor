@@ -67,6 +67,11 @@ fn run() -> Result<()> {
         &pwm_config,
     )?;
 
+    let clock_source = unsafe { esp_idf_sys::rtc_clk_slow_freq_get() };
+    if clock_source != esp_idf_sys::rtc_slow_freq_t_RTC_SLOW_FREQ_32K_XTAL {
+        bail!("wrong slow clock source");
+    }
+
     if reset::ResetReason::get() != reset::ResetReason::DeepSleep {
         greeting(&mut led_driver)?;
     } else {
