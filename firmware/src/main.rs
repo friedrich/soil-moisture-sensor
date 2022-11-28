@@ -84,6 +84,7 @@ fn run() -> Result<()> {
     match adc_driver.read(&mut adc_channel_driver) {
         Ok(value) => {
             let time = slow_clock_seconds();
+            println!("recorded value: {} at {}", value, time);
 
             unsafe {
                 MEASUREMENTS.overwriting_push_back(Measurement { value, time });
@@ -91,8 +92,6 @@ fn run() -> Result<()> {
                     return Ok(());
                 }
             }
-
-            println!("recorded value: {} at {}", value, time);
         }
         Err(e) => {
             bail!("error measuring: {}", e);
