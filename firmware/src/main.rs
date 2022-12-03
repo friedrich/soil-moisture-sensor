@@ -13,6 +13,7 @@ use esp_idf_svc::netif::IpEvent;
 use esp_idf_svc::wifi::{EspWifi, WifiEvent};
 use esp_idf_svc::{eventloop, nvs, sntp};
 use std::sync::mpsc::channel;
+use std::time::Duration;
 
 const WIFI_SSID: &str = env!("WIFI_SSID");
 const WIFI_PASSWORD: &str = env!("WIFI_PASSWORD");
@@ -21,7 +22,8 @@ const WRITE_URL: &str = env!("WRITE_URL");
 const AUTHORIZATION: &str = env!("AUTHORIZATION");
 const LINE_PREFIX: &str = env!("LINE_PREFIX");
 
-const MIN_RECORDED_MEASUREMENTS: usize = 36;
+const MEASUREMENT_INTERVAL: Duration = Duration::from_secs(3600);
+const MIN_RECORDED_MEASUREMENTS: usize = 6;
 const MAX_RECORDED_MEASUREMENTS: usize = 1000;
 
 #[derive(Clone)]
@@ -189,8 +191,8 @@ fn greeting<T: gpio::Pin, MODE: gpio::OutputMode>(
 }
 
 unsafe fn go_to_sleep() -> ! {
-    let delay_in_ms = 10 * 60 * 1000;
-    esp_idf_sys::esp_sleep_enable_timer_wakeup(delay_in_ms * 1000);
+    let delay = MEASUREMENT_INTERVAL.as_micros() as _;
+    esp_idf_sys::esp_sleep_enable_timer_wakeup(delay);
     esp_idf_sys::esp_deep_sleep_start();
     unreachable!();
 }
