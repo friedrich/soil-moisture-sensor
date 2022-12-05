@@ -29,6 +29,7 @@ const MAX_RECORDED_MEASUREMENTS: usize = 1000;
 #[derive(Clone)]
 struct Measurement {
     value: u16,
+    battery_voltage: u16,
     time: u32,
 }
 
@@ -61,6 +62,9 @@ fn run() -> Result<()> {
     let mut adc_channel_driver: adc::AdcChannelDriver<gpio::Gpio4, adc::Atten11dB<_>> =
         adc::AdcChannelDriver::new(peripherals.pins.gpio4)?;
 
+    let mut battery_adc_channel_driver: adc::AdcChannelDriver<gpio::Gpio3, adc::Atten11dB<_>> =
+        adc::AdcChannelDriver::new(peripherals.pins.gpio3)?;
+
     let pwm_config = ledc::config::TimerConfig::new().frequency(50.kHz().into());
     let mut sensor_pwm_driver = ledc::LedcDriver::new(
         peripherals.ledc.channel0,
@@ -83,13 +87,19 @@ fn run() -> Result<()> {
     sensor_pwm_driver.set_duty(sensor_pwm_driver.get_max_duty() / 100)?;
     FreeRtos::delay_ms(20); // TODO: good value?
 
+    let battery_voltage = adc_driver.read(&mut battery_adc_channel_driver)?;
+
     match adc_driver.read(&mut adc_channel_driver) {
         Ok(value) => {
             let time = slow_clock_seconds();
             println!("recorded value: {} at {}", value, time);
 
             unsafe {
-                MEASUREMENTS.overwriting_push_back(Measurement { value, time });
+                MEASUREMENTS.overwriting_push_back(Measurement {
+                    value,
+                    battery_voltage,
+                    time,
+                });
                 if MEASUREMENTS.len() < MIN_RECORDED_MEASUREMENTS {
                     return Ok(());
                 }
@@ -207,9 +217,10 @@ fn send_values(measurements: &[Measurement], time_offset: i64) -> anyhow::Result
         .iter()
         .map(|m| {
             format!(
-                "{}{} {}000000000\n",
+                "{}{},battery_voltage={} {}000000000\n",
                 LINE_PREFIX,
                 m.value,
+                m.battery_voltage,
                 m.time as i64 + time_offset
             )
         })
